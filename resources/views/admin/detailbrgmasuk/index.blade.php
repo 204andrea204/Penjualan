@@ -23,7 +23,7 @@
                   <span aria-hidden="true">&times;</span></button>
               </div>
               <div class="modal-body">
-                <form action="{{url('/admin/brgmasuk/save')}}" method="POST" enctype="multipart/form-data">
+                <form action="{{url('/admin/detailbrgmasuk/save')}}" method="POST" enctype="multipart/form-data">
 
                   <div class="form-group">
                     <label for="formGroupExampleInput">nonota</label>
@@ -31,40 +31,27 @@
                     placeholder="Judul" required>
                   </div>
                   <div class="form-group">
-                    <label for="formGroupExampleInput">tglmasuk</label>
-                     <input type="text" class="form-control" name="tglmasuk" id="formGroupExampleInput" 
-                    placeholder="tglmasuk" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput">iddistributor</label>
-                     <select class="form-control" name="iddistributor">
+                    <label for="formGroupExampleInput">kodebarang</label>
+                     <select class="form-control" name="kodebarang">
                       <?php
-                        $iddistributor = \App\tbldistributor::all();
+                        $kodebarang = \App\tblbarang::all();
 
                       ?>
-                      @foreach($iddistributor as $p)
-                      <option>{{$p->iddistributor}}</option>
+                      @foreach($kodebarang as $p)
+                      <option>{{$p->kodebarang}}</option>
                       @endforeach
                       </select> 
                   </div>
                   <div class="form-group">
-                    <label for="formGroupExampleInput">idpetugas</label>
-                     <select class="form-control" name="idpetugas">
-                      <?php
-                        $idpetugas = \App\tblpetugas::all();
-
-                      ?>
-                      @foreach($idpetugas as $p)
-                      <option>{{$p->idpetugas}}</option>
-                      @endforeach
-                      </select> 
+                    <label for="formGroupExampleInput">jumlah</label>
+                     <input type="text" class="form-control" name="jumlah" id="formGroupExampleInput" 
+                    placeholder="Judul" required>
                   </div>
                   <div class="form-group">
-                    <label for="formGroupExampleInput">total</label>
-                     <input type="text" class="form-control" name="total" id="formGroupExampleInput" 
-                    placeholder="total" required>
+                    <label for="formGroupExampleInput">subtotal</label>
+                     <input type="text" class="form-control" name="subtotal" id="formGroupExampleInput" 
+                    placeholder="Judul" required>
                   </div>
-
 
           @csrf
 
@@ -87,10 +74,9 @@
                 <tr>
                   <th>NO</th>
                   <th>nonota</th>
-                  <th>tglmasuk</th>
-                  <th>iddistributor</th>
-                  <th>idpetugas</th>
-                  <th>total</th>
+                  <th>kodebarang</th>
+                  <th>jumlah</th>
+                  <th>subtotal</th>
                   <th>Action</th>
                 </tr>
                 </thead>
@@ -105,13 +91,12 @@
 
 
                   <td>{{$q->nonota}}</td>
-                  <td>{{$q->tglmasuk}}</td>
-                  <td>{{$q->iddistributor}}</td>
-                  <td>{{$q->idpetugas}}</td>
-                  <td>{{$q->total}}</td>
+                  <td>{{$q->kodebarang}}</td>
+                  <td>{{$q->jumlah}}</td>
+                  <td>{{$q->subtotal}}</td>
                   <td>
 
-                  	<a href="{{url('admin/brgmasuk/delete/'.$q->id)}}" class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin ingin menghapusnya ?');"><i class="fa fa-trash"></i></a>
+                  	<a href="{{url('admin/detailbrgmasuk/delete/'.$q->id)}}" class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin ingin menghapusnya ?');"><i class="fa fa-trash"></i></a>
 
                   	<a  data-toggle="modal" data-target="#modal-edit{{$q->id}}" href="#modal-edit{{$q->id}}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
 
@@ -129,46 +114,34 @@
                   <span aria-hidden="true">&times;</span></button>
               </div>
               <div class="modal-body">
-                <form action="{{url('/admin/brgmasuk/update')}}" method="POST" enctype="multipart/form-data">
+                <form action="{{url('/admin/detailbrgmasuk/update')}}" method="POST" enctype="multipart/form-data">
 
                     <div class="form-group">
                       <label for="formGroupExampleInput">nonota</label>
                       <input type="text" class="form-control" name="nonota" id="formGroupExampleInput" 
                       placeholder="nonota" value="{{$q->nonota}}" required>
                     </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">kodebarang</label>
+                     <select class="form-control" name="kodebarang">
+                      <?php
+                        $kodebarang = \App\tblbarang::all();
+
+                      ?>
+                      @foreach($kodebarang as $p)
+                      <option>{{$p->kodebarang}}</option>
+                      @endforeach
+                      </select> 
+                  </div>
                     <div class="form-group">
-                      <label for="formGroupExampleInput">tglmasuk</label>
-                      <input type="text" class="form-control" name="tglmasuk" id="formGroupExampleInput" 
-                      placeholder="tglmasuk" value="{{$q->tglmasuk}}" required>
+                      <label for="formGroupExampleInput">jumlah</label>
+                      <input type="text" class="form-control" name="jumlah" id="formGroupExampleInput" 
+                      placeholder="jumlah" value="{{$q->jumlah}}" required>
                     </div>
                     <div class="form-group">
-                    <label for="formGroupExampleInput">iddistributor</label>
-                     <select class="form-control" name="iddistributor">
-                      <?php
-                        $iddistributor = \App\tbldistributor::all();
-
-                      ?>
-                      @foreach($iddistributor as $p)
-                      <option>{{$p->iddistributor}}</option>
-                      @endforeach
-                      </select> 
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput">idpetugas</label>
-                     <select class="form-control" name="idpetugas">
-                      <?php
-                        $idpetugas = \App\tblpetugas::all();
-
-                      ?>
-                      @foreach($idpetugas as $p)
-                      <option>{{$p->idpetugas}}</option>
-                      @endforeach
-                      </select> 
-                  </div>
-                    <div class="form-group">
-                      <label for="formGroupExampleInput">total</label>
-                      <input type="text" class="form-control" name="total" id="formGroupExampleInput" 
-                      placeholder="total" value="{{$q->total}}" required>
+                      <label for="formGroupExampleInput">subtotal</label>
+                      <input type="text" class="form-control" name="subtotal" id="formGroupExampleInput" 
+                      placeholder="subtotal" value="{{$q->subtotal}}" required>
                     </div>
 
                     @csrf
@@ -197,4 +170,4 @@
 </body>
 </html>
 
-@endsection 
+@endsection

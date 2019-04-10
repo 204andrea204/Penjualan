@@ -14,7 +14,8 @@ class CreateTbljenisTable extends Migration
     public function up()
     {
         Schema::create('tbljenis', function (Blueprint $table) {
-            $table->bigIncrements('kodejenis');
+            $table->bigIncrements('id');
+            $table->string('kodejenis');
             $table->string('jenis');
             $table->timestamps();
         });

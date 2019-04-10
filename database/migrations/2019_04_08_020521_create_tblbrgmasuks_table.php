@@ -16,9 +16,10 @@ class CreateTblbrgmasuksTable extends Migration
         Schema::create('tblbrgmasuks', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('nonota');
-            $table->integer('kodebarang');
-            $table->integer('jumlah');
-            $table->integer('subtotal');
+            $table->string('tglmasuk');
+            $table->integer('iddistributor');
+            $table->integer('idpetugas');
+            $table->integer('total');
             $table->timestamps();
         });
     }

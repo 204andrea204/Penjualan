@@ -47,6 +47,14 @@ Route::get('/', 'PenjualanController@index');
 	Route::post('/admin/penjualan/update', 'PenjualanController@update');
 	Route::get('/admin/penjualan/delete/{id}', 'PenjualanController@delete');
 
+Route::get('/', 'DetailpenjualanController@index');
+	Route::get('/admin/detailpenjualan/index', 'DetailpenjualanController@index');
+	Route::get('/admin/detailpenjualan/add', 'DetailpenjualanController@add');
+	Route::post('/admin/detailpenjualan/save', 'DetailpenjualanController@save');
+	Route::get('/admin/detailpenjualan/edit/{id}', 'DetailpenjualanController@edit');
+	Route::post('/admin/detailpenjualan/update', 'DetailpenjualanController@update');
+	Route::get('/admin/detailpenjualan/delete/{id}', 'DetailpenjualanController@delete');
+
 Route::get('/', 'TblbrgmasukController@index');
 	Route::get('/admin/brgmasuk/index', 'TblbrgmasukController@index');
 	Route::get('/admin/brgmasuk/add', 'TblbrgmasukController@add');
@@ -54,6 +62,22 @@ Route::get('/', 'TblbrgmasukController@index');
 	Route::get('/admin/brgmasuk/edit/{id}', 'TblbrgmasukController@edit');
 	Route::post('/admin/brgmasuk/update', 'TblbrgmasukController@update');
 	Route::get('/admin/brgmasuk/delete/{id}', 'TblbrgmasukController@delete');
+
+Route::get('/', 'TbldetailbrgmasukController@index');
+	Route::get('/admin/detailbrgmasuk/index', 'TbldetailbrgmasukController@index');
+	Route::get('/admin/detailbrgmasuk/add', 'TbldetailbrgmasukController@add');
+	Route::post('/admin/detailbrgmasuk/save', 'TbldetailbrgmasukController@save');
+	Route::get('/admin/detailbrgmasuk/edit/{id}', 'TbldetailbrgmasukController@edit');
+	Route::post('/admin/detailbrgmasuk/update', 'TbldetailbrgmasukController@update');
+	Route::get('/admin/detailbrgmasuk/delete/{id}', 'TbldetailbrgmasukController@delete');
+
+Route::get('/', 'JenisController@index');
+	Route::get('/admin/jenis/index', 'JenisController@index');
+	Route::get('/admin/jenis/add', 'JenisController@add');
+	Route::post('/admin/jenis/save', 'JenisController@save');
+	Route::get('/admin/jenis/edit/{id}', 'JenisController@edit');
+	Route::post('/admin/jenis/update', 'JenisController@update');
+	Route::get('/admin/jenis/delete/{id}', 'JenisController@delete');
 
 Route::get('/admin/index', function () {
     return view('admin.index');
