@@ -330,13 +330,15 @@ F<!DOCTYPE html>
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
 
-        <li class="active"><a href="{{url('/admin/index')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li class="active"><a href="{{url('/admin/barang/index')}}"><i class="fa fa-dashboard"></i> Barang</a></li>
-         <li class="active"><a href="{{url('/admin/petugas/index')}}"><i class="fa fa-dashboard"></i> Petugas</a></li>
-         <li class="active"><a href="{{url('/admin/distributor/index')}}"><i class="fa fa-dashboard"></i> Distributor</a></li>
-         <li class="active"><a href="{{url('/admin/penjualan/index')}}"><i class="fa fa-dashboard"></i> Penjualan</a></li><li class="active"><a href="{{url('/admin/detailbrgmasuk/index')}}"><i class="fa fa-dashboard"></i> Detail Barang Masuk</a></li>
-         <li class="active"><a href="{{url('/admin/brgmasuk/index')}}"><i class="fa fa-dashboard"></i> Barang Masuk</a></li>
-         <li class="active"><a href="{{url('/admin/jenis/index')}}"><i class="fa fa-dashboard"></i> Jenis</a></li>
+        <li class="active"><a href="{{url('/admin/index')}}"><i class="fa fa-dashboard"></i>&nbsp;&nbsp;&nbsp;&nbsp;Dashboard</a></li>
+        <li class="active"><a href="{{url('/admin/barang/index')}}"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;&nbsp;Barang</a></li>
+         <li class="active"><a href="{{url('/admin/petugas/index')}}"><i class="fa fa-bell"></i>&nbsp;&nbsp;&nbsp;&nbsp;Petugas</a></li>
+         <li class="active"><a href="{{url('/admin/distributor/index')}}"><i class="fa fa-balance-scale"></i>&nbsp;&nbsp;&nbsp;&nbsp;Distributor</a></li>
+         <li class="active"><a href="{{url('/admin/detailpenjualan/index')}}"><i class="fa fa-book"></i>&nbsp;&nbsp;&nbsp;&nbsp;Detail Penjualan</a></li>
+         <li class="active"><a href="{{url('/admin/penjualan/index')}}"><i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;Penjualan</a></li>
+         <li class="active"><a href="{{url('/admin/detailbrgmasuk/index')}}"><i class="fa fa-save"></i>&nbsp;&nbsp;&nbsp;&nbsp;Detail Barang Masuk</a></li>
+         <li class="active"><a href="{{url('/admin/brgmasuk/index')}}"><i class="fa fa-clone"></i>&nbsp;&nbsp;&nbsp;&nbsp;Barang Masuk</a></li>
+         <li class="active"><a href="{{url('/admin/jenis/index')}}"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;&nbsp;Jenis</a></li>
 
       </ul>
     </section>
