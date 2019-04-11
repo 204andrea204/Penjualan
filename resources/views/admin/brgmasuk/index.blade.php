@@ -24,7 +24,7 @@
               </div>
               <div class="modal-body">
                 <form action="{{url('/admin/brgmasuk/save')}}" method="POST" enctype="multipart/form-data">
-
+                  <input type="hidden" name="id" value="">
                   <div class="form-group">
                     <label for="formGroupExampleInput">nonota</label>
                      <input type="text" class="form-control" name="nonota" id="formGroupExampleInput" 
@@ -32,7 +32,7 @@
                   </div>
                   <div class="form-group">
                     <label for="formGroupExampleInput">tglmasuk</label>
-                     <input type="text" class="form-control" name="tglmasuk" id="formGroupExampleInput" 
+                     <input type="date" class="form-control" name="tglmasuk" id="formGroupExampleInput" 
                     placeholder="tglmasuk" required>
                   </div>
                   <div class="form-group">
@@ -97,7 +97,7 @@
                 <tbody>
                   <?php
                     $i= 1;
-                    $brgmasuk = \App\tbldetailbrgmasuk::all();
+                    $brgmasuk = \App\tblbrgmasuk::all();
                     ?>
                   @foreach($brgmasuk as $q)
                 <tr>
@@ -138,7 +138,7 @@
                     </div>
                     <div class="form-group">
                       <label for="formGroupExampleInput">tglmasuk</label>
-                      <input type="text" class="form-control" name="tglmasuk" id="formGroupExampleInput" 
+                      <input type="date" class="form-control" name="tglmasuk" id="formGroupExampleInput" 
                       placeholder="tglmasuk" value="{{$q->tglmasuk}}" required>
                     </div>
                     <div class="form-group">

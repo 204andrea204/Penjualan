@@ -32,7 +32,7 @@
                   </div>
                   <div class="form-group">
                     <label for="formGroupExampleInput">tglpenjualan</label>
-                     <input type="text" class="form-control" name="tglpenjualan" id="formGroupExampleInput" 
+                     <input type="date" class="form-control" name="tglpenjualan" id="formGroupExampleInput" 
                     placeholder="tglpenjualan" required>
                   </div>
                   <div class="form-group">
@@ -137,7 +137,7 @@
                     </div>
                     <div class="form-group">
                       <label for="formGroupExampleInput">tglpenjualan</label>
-                      <input type="text" class="form-control" name="tglpenjualan" id="formGroupExampleInput" 
+                      <input type="date" class="form-control" name="tglpenjualan" id="formGroupExampleInput" 
                       placeholder="tglpenjualan" value="{{$q->tglpenjualan}}" required>
                     </div>
                     <div class="form-group">

@@ -97,7 +97,7 @@
                   <th scope="row">{{$i++}}</th>
 
 
-                  <td>{{$q->nonfaktur}}</td>
+                  <td>{{$q->nofaktur}}</td>
                   <td>{{$q->kodebarang}}</td>
                   <td>{{$q->jumlah}}</td>
                   <td>{{$q->subtotal}}</td>

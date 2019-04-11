@@ -64,7 +64,7 @@ Route::get('/', 'TblbrgmasukController@index');
 	Route::get('/admin/brgmasuk/delete/{id}', 'TblbrgmasukController@delete');
 
 Route::get('/', 'TbldetailbrgmasukController@index');
-	Route::get('/admin/detailbrgmasuk/index', 'TbldetailbrgmasukController@index');
+	Route::get('/admin/detailbrgmasuk/index/{id}', 'TbldetailbrgmasukController@index');
 	Route::get('/admin/detailbrgmasuk/add', 'TbldetailbrgmasukController@add');
 	Route::post('/admin/detailbrgmasuk/save', 'TbldetailbrgmasukController@save');
 	Route::get('/admin/detailbrgmasuk/edit/{id}', 'TbldetailbrgmasukController@edit');
